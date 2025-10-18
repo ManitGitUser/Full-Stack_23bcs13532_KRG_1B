@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Performance Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #555;
+      padding: 8px;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      display: flex;
+      margin: 20px;
+    }
+    .sidebar {
+      width: 25%;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-right: 20px;
+    }
+    .main {
+      flex: 1;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .game-card {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AwareDesk Gaming Edition</h1>
+    <p>Game Performance Monitoring Dashboard (Experiment 4)</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Game Library</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Reports</a>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Game Library</h3>
+      <div class="game-card">
+        <strong>GTA V</strong><br>
+        Genre: Action<br>
+        Platform: PC
+      </div>
+      <div class="game-card">
+        <strong>Red Dead Redemption 2</strong><br>
+        Genre: Adventure<br>
+        Platform: PC
+      </div>
+    </div>
+
+    <div class="main">
+      <h3>Performance Summary</h3>
+      <p>CPU Usage: 45%</p>
+      <p>GPU Usage: 70%</p>
+      <p>RAM Usage: 8 GB</p>
+      <p>FPS: 80</p>
+
+      <h4>Optimization Tips</h4>
+      <ul>
+        <li>Close background applications.</li>
+        <li>Lower shadow quality for better FPS.</li>
+        <li>Keep GPU drivers updated.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Submitted by: Manit Saxena | Section: KRG-1 (B)</p>
+  </div>
+</body>
+</html>
