@@ -1,0 +1,23 @@
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Body & Root Styling ---------- */
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+/* Prevent Vite from centering everything */
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+/* Optional: Remove horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
