@@ -1,0 +1,83 @@
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Body & Root Styling ---------- */
+body {
+  background-color: #1b2838;
+  color: #c7d5e0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ---------- Game Grid Layout (NOW RESPONSIVE) ---------- */
+.game-grid {
+  display: grid;
+  /* This is the new, responsive grid. 
+    It will automatically fill the row with as many 180px-1fr cards as it can.
+    This replaces your repeat(6, 1fr) and all the media queries.
+  */
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 0 10px; /* Add a little padding */
+}
+
+/* ---------- Game Card ---------- */
+.game-card {
+  background-color: #2a475e;
+  border: 1px solid #406883;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  /* Center the text */
+  text-align: center;
+}
+
+.game-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 10px #66c0f4;
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.game-card h4 {
+  margin: 5px 0;
+  font-size: 14px;
+  color: white;
+}
+
+.game-card p {
+  font-size: 12px;
+  color: #c7d5e0;
+  margin: 0;
+}
+
+/* We don't need all those fixed media queries anymore,
+  but we can keep one or two for very small screens.
+*/
+@media (max-width: 400px) {
+  .game-grid {
+    /* On tiny screens, just make them 2-wide */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+}
