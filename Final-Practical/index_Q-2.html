@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            nav {background:blue;padding:10px}
+            .logo{color:white}
+            .menu{display:none;color:white;cursor:pointer}
+            .links{display:flex;gap:15px;color:white;list-style:none}
+            .links a{color:white}
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">Logo</div>
+            <div class="menu" onclick="document.getElementById('links').classList.toggle('show')">☰</div>
+            <ul class="links" id="links">
+                <li><a href="#h">Home</a>
+                <li><a href="#a">About</a>
+                <li><a href="#c">Contact</a>
+            </ul>
+        </nav>
+
+        <div style="padding:20px">
+            <div id="h"><h2>Home</h2></div>
+            <div id="a"><h2>About</h2></div>
+            <div id="c"><h2>Contact</h2></div>
+        </div>
+
+        <script>
+            document.querySelectorAll('a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('show'))
+        </script>
+    </body>
+</html>
